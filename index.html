@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width"> -->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>南洋华裔寻根谒祖综合展示系统</title>
+    <link rel="stylesheet" href="css/comment.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+</head>
+
+<body>
+    <div class="container-box">
+        <div class="header-box">
+            <div class="logo-box">
+                <i class="logo-icon"></i>
+                <span class="logo-text">南洋华裔寻根谒祖综合展示系统</span>
+            </div>
+            <ul class="menu-ul-box" id="menuUl">
+               
+                <li controlMenu="lxMenuDl"  class="active"><i class="count-icon"></i>泉州播迁</li>
+                <li controlMenu="" id="ydyl"><i class="site-icon"></i>一带一路</li>
+                <li controlMenu="xsMenuDl" id="xsfb"><i class="key-icon"></i>姓氏分布</li>
+            </ul>
+        </div>
+        <div class="project-box" id="createAppBox">
+            <div class="project-left-box" id="leftBox">
+                <dl id="xsMenuDl" class="menuDl hide">
+                    <dt>姓氏分布</dt>
+                    <div class="secondMenuDl" id="xsfbMenuDl">
+                        <dd class="" colorType="#2d75ac">陈姓分布</dd>
+                        <dd class="" colorType="#13ac98">林姓分布</dd>
+                        <dd class="" colorType="#1ab349">黄姓分布</dd>
+                        <dd class="" colorType="#aaa81b">王姓分布</dd>
+                        <dd class="" colorType="#be7d28">李姓分布</dd>
+                    </div>
+                   <!--  <dt>姓氏分布回溯</dt>
+                    <div class="secondMenuDl hide">
+                        <dd class="">陈姓分布回溯</dd>
+                        <dd class="">林姓分布回溯</dd>
+                        <dd class="">黄姓分布回溯</dd>
+                        <dd class="">王姓分布回溯</dd>
+                        <dd class="">李姓分布回溯</dd>
+                    </div> -->
+                </dl>
+                <dl id="lxMenuDl" class="menuDl">
+                    <dt>流向分析</dt>
+                    <dd class="active" id="xsjnlx">境内播迁图</dd>
+                    <dd class="" id="xsjwlx">南洋华裔播迁图</dd>
+                    <!-- <dd class="">姓氏境内播迁史</dd> -->
+                    <dd class="" id="xsjwHistory">南洋华裔播迁史</dd>
+                </dl>
+            </div>
+            <div class="project-content-box">
+                <div class="mapViewBox"  id="mapView"></div>
+                <div class="barChartBox box hide" id="barChartBox">
+                    <h1 class="title" id="xsfbChartTitle">xxxxxxxxxxxxxxxxxxxxxxx</h1>
+                    <a class="close">×</a>
+                    <div class="box-content" id="barChart">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="project-right-box" id="rightBox">
+                <div id="typeSelector" class="type-selector">
+                    <div myType="typeItem" myIndex="0" class="type-item">
+                        <input type="radio" checked="true"></input>侨界、港澳台重点人士及留学生
+                    </div>
+                    <div myType="typeItem" myIndex="1" class="type-item">
+                        <input type="radio"></input>华侨华人社团、港澳台社团
+                    </div>
+                    <div myType="typeItem" myIndex="2" class="type-item">
+                        <input type="radio"></input>归侨侨眷、港澳台同胞眷属
+                    </div>
+                </div>
+                <h1 class="title"><i></i><span id="tableTitle"></span></h1>
+                <div class="tableBox" id="tableBox"></div>
+            </div>
+            <div id="formDiv" class="form-div">
+                <div id="formCloseBtn" class="close-btn">X</div>
+                <div myIndex="0" myType="showItem" class="show-item">
+                    <img src="images/liuxuesheng.png">
+                </div>
+                <div myIndex="1" myType="showItem" class="show-item">
+                    <img src="images/shetuanxinxi.png">
+                </div>
+                <div myIndex="2" myType="showItem" class="show-item">
+                    <img src="images/guiqiaoqiaojuan.png">
+                </div>                
+            </div>
+        </div>
+    </div>
+    <script src="js/lib/jquery/jquery-1.11.3.min.js"></script>
+    <script src="js/lib/echart/echarts2.min.js"></script>
+    <script data-main="js/main" src="js/lib/require/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+        var projectLocation = location.pathname.replace(/[^\/]+$/, '');
+        require.config({
+            config: {
+                'pixie/index': {
+                    apiKey: 'XJKDLNS'
+                }
+            },
+            packages: [{
+                name: 'echart',
+                location: projectLocation + 'js/lib/echarts.min',
+                main: 'echart'
+            }, {
+                name: 'modules',
+                location: projectLocation + 'js/modules',
+                main: 'modules'
+            }, {
+                name: "echo",
+                location: projectLocation + "js/echo",
+                main: 'echo'
+            }]
+        });
+    }
+    </script>
+</body>
+
+</html>

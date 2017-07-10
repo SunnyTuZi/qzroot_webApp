@@ -1,0 +1,39 @@
+{
+	"results": [{
+		"area": "鲤城区",
+		"count": 92
+	}, {
+		"area": "丰泽区",
+		"count": 73
+	}, {
+		"area": "洛江区",
+		"count": 68
+	}, {
+		"area": "晋江市",
+		"count": 63
+	}, {
+		"area": "石狮市",
+		"count": 53
+	}, {
+		"area": "南安市",
+		"count": 50
+	}, {
+		"area": "惠安县",
+		"count": 47
+	}, {
+		"area": "安溪县",
+		"count": 47
+	}, {
+		"area": "永春县",
+		"count": 46
+	}, {
+		"area": "德化县",
+		"count": 43
+	}, {
+		"area": "泉港区",
+		"count": 42
+	}, {
+		"area": "金门县",
+		"count": 41
+	}]
+}

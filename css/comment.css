@@ -1,0 +1,227 @@
+/*媒体查询*/
+@media screen and (min-width:960px) and (max-width: 1024px) {      
+	html,body{
+		font-size: 11.25px;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1280px){      
+	html,body{
+		font-size: 12px;
+	}
+}
+@media screen and (min-width: 1280px) and (max-width: 1366px){      
+	html,body{
+		font-size: 15px;
+	}
+}
+@media screen and (min-width: 1366px) and (max-width: 1440px){      
+	html,body{
+		font-size: 16px;
+	}
+}
+@media screen and (min-width: 1440px) and (max-width: 1680px){      
+	html,body{
+		font-size: 16.85px;
+	}
+}
+@media screen and (min-width: 1680px) and (max-width: 1920px){      
+	html,body{
+		font-size: 19.7px
+	}
+}
+@media screen and (min-width: 1920px){      
+	html,body{
+		font-size: 22.5px;
+	}
+}
+/*通用样式*/
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, 
+textarea, iframe, table, th, td {
+	margin: 0; 
+	padding: 0;
+}
+ul,li,ol {
+	list-style: none !important;
+}
+fieldset,img{
+	border:0 none;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+} 
+h1,h2,h3,h4,h5,h6 {
+	font-size: 16px;
+	font-weight: normal;
+} 
+address,caption,cite,code,dfn,em,strong,th,var{
+	font-style:normal;
+	font-weight:normal;
+} 
+abbr,acronym {
+	border:0;
+}
+a{
+	text-decoration: none;
+}
+span,a{
+	margin: 0;
+	padding: 0;
+}
+input,textarea{
+	outline:none;
+}
+/*a标签点击*/
+a{
+	cursor: pointer;
+	display: inline-block;
+}
+
+/*表单*/
+.table-form{
+	width: 100%;
+	table-layout: fixed;
+}
+.table-form th{
+	height: 42px;
+	color: #FFFFFF;
+	font-size:42px;
+	background-color: #358DE6;
+}
+.table-form th,.table-form td{
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	font-size: 14px;
+	border: 1px solid #DDDDDD;
+	word-wrap:break-word;
+	text-align: center;
+	
+}
+/*高德logo隐藏*/
+.amap-logo{
+    display: none !important;
+}
+.amap-copyright{
+	 display: none !important;
+}
+
+/*输入框*/
+.input-text{
+	text-indent: 10px;
+	width: 300px;
+	height: 36px;
+	line-height: 36px;
+	border:1px solid #DDD;
+	border-radius: 2px;
+	color: #999;
+}
+.select-text{
+	text-indent: 10px;
+	width: 300px;
+	height: 38px;
+	line-height: 38px;
+	border:1px solid #DDD;
+	border-radius: 2px;
+	color: #999;
+}
+/*遮盖层*/
+.masking-layer{
+	display: none;;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	background-color: #000000;
+    -webkit-opacity: 0.5;   
+    -moz-opacity: 0.5;  
+    -khtml-opacity: 0.5;   
+    opacity: .5;  
+    filter:alpha(opacity=50);  
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";  
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50); 
+    z-index: 888;
+}
+
+/*弹出窗*/
+.msgContiner{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 9999;
+	/*background: rgba(0,0,0,0.05);*/
+}
+.msgContiner .msgBox{
+	position: absolute;
+	width: 268px;
+	height: 150px;
+	border:1px solid #66c3e9;
+	border-radius: 3px;
+	box-shadow: 0 0.5px 10px #898989;
+	background-color: #66c3e9;
+	padding: 0px 5px;
+}
+.msgContiner .msgBox .msgTitle{
+	padding: 5px 10px;
+	background-color: #66c3e9;
+	font-size: 16px;
+	font-weight: normal;
+	color: #0b658a;
+}
+.msgContiner .msgBox .msgBoxClose{
+	position: absolute;
+	top: 1px;
+	right: 3px;
+	font-weight: bold;
+	font-size: 20px;
+	color: #FFF;
+	cursor: pointer;
+}
+.msgContiner .msgBox .msgBoxContent{
+	height: 90px;
+	padding: 10px;
+	font-size: 14px;
+	border-radius: 3px;
+	background-color: #FAFAFA;
+}
+.msgContiner .msgBox .msgButton{
+	position: absolute;
+	right:10px;
+	bottom: 20px;
+}
+.msgContiner .msgBox .btn{
+	padding: 3px 10px;
+	border: 1px solid #2c6441;
+	border-radius: 3px;
+	background-color: #FAFAFA;
+	margin-left: 20px;
+	color: #333;
+}
+
+/*窗口类*/
+.box{
+	box-shadow: 0 0 5px #727272;
+	position: relative;
+	background-color: #ffffff;
+}
+.box-content{
+	padding:10px;
+	width: auto;
+	color: #292929;
+}
+.close{
+	font-size: 24px;
+	color: #FFF;
+	position: absolute;
+	top: -2px;
+	right: 5px;
+	cursor: pointer;
+}
+
+.hide{
+	display: none;
+}

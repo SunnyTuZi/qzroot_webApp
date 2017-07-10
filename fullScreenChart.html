@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>南洋华裔寻根谒祖综合展示系统</title>
+    <link rel="stylesheet" href="css/comment.css" />
+    <link rel="stylesheet" href="css/full.css" />
+</head>
+
+<body>
+    <div class="container-box">
+        <div class="logo-box">南洋华裔寻根谒祖综合展示系统</div>
+        <div class="chart-box">
+            <div class="chart-box1">
+                <div class="chart-box-list bg-border-shadow">
+                    <div class="chart-box1-list1-box1 f-l" id="jnBarChart"></div>
+                    <div class="chart-box1-list1-box2 f-r" id="jnMapChart"></div>
+                </div>
+                <div class="chart-box-list">
+                    <div class="chart-box1-list2-box bg-border-shadow t-box" id="bqLineChart"></div>
+                    <div class="chart-box1-list2-box bg-border-shadow b-box" id="bqPieChart"></div>
+                </div>
+            </div>
+            <div class="chart-box2 f-c">
+                <div class="chart-box-list bg-border-shadow f-l">
+                    <div class="chart-box1-list1-box1 f-l" id="yiylBarChart"></div>
+                    <div class="chart-box1-list1-box2 f-r" id="yiylMapChart"></div>
+                </div>
+                <div class="chart-box-list f-r">
+                    <div class="chart-box2-list2-box bg-border-shadow m-r f-l" id="xsBarChart"></div>
+                    <div class="chart-box2-list2-box bg-border-shadow f-r">
+                        <h1 class="title">各区族谱修缮进度</h1>
+                        <div class="chart-content-box" id="xsTable">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <script src="js/lib/jquery/jquery-1.11.3.min.js"></script>
+    <script src="js/lib/echart/echarts2.js"></script>
+    <script src="js/lib/echart/echarts3.min.js"></script>
+    <script src="js/lib/echart/china.js"></script>
+    <script src="js/lib/echart/world.js"></script>
+    <script data-main="js/modules/private/fullScreenChart.js" src="js/lib/require/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+        var projectLocation = location.pathname.replace(/[^\/]+$/, '');
+        require.config({
+            config: {
+                'pixie/index': {
+                    apiKey: 'XJKDLNS'
+                }
+            },
+            packages: [{
+                name: 'echart',
+                location: projectLocation + 'js/lib/echarts.min',
+                main: 'echart'
+            }, {
+                name: 'modules',
+                location: projectLocation + 'js/modules',
+                main: 'modules'
+            }, {
+                name: "echo",
+                location: projectLocation + "js/echo",
+                main: 'echo'
+            }]
+        });
+    }
+    </script>
+</body>
+
+</html>

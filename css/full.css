@@ -1,0 +1,111 @@
+/*全局字体大小，字体类型，字体颜色*/
+html,
+body {
+    font-family: '微软雅黑';
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    color: #358DE6;
+}
+.container-box{
+	width: 100%;
+    height: 100%;
+    background-color: #FAFAFA;
+}
+.container-box .logo-box{
+	width: 100%;
+	height: 4rem;
+	line-height: 4rem;
+	text-align: center;
+	font-size: 1.5rem;
+	color: #358DE6;
+	background: url(../images/title-bg.png) no-repeat center center;
+}
+.container-box .chart-box{
+	position: absolute;
+	top: 3.5rem;
+	bottom: 0px;
+	width: 100%;
+}
+.bg-border-shadow{
+	background-color: #FFF;
+	border:1px solid #EEE;
+	box-shadow: 1px 1px 2px #DDD;
+}
+.container-box .chart-box1{
+	margin-top: 1%;
+	width: 100%;
+	height: 47%;
+}
+.container-box .chart-box2{
+	margin-top: 1%;
+	width: 100%;
+	height: 47%;
+}
+.container-box .chart-box-list{
+	float: left;
+	width: 48.5%;
+	height: 100%;
+	position: relative;
+	margin-left: 1%;
+}
+.container-box  .chart-box1-list2-box{
+	width: 100%;
+	height: 48%;
+}
+.container-box  .chart-box2-list2-box{
+	width: 49%;
+	height: 100%;
+	position: relative;
+}
+.f-l{
+	float: left;
+}
+.f-r{
+	float: right;
+}
+.m-b{
+	margin-bottom: 1.5%;
+}
+.m-r{
+	margin-right: 1%;
+}
+.t-box{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+.f-c{
+	clear: both;
+}
+.b-box{
+	position: absolute;
+	bottom: -2px;
+	width: 100%;
+}
+.container-box .title{
+	padding: 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.container-box .chart-content-box{
+	position: absolute;
+	top: 35px;
+	right: 10px;
+	left:10px;
+	bottom:10px;
+	overflow-y:auto;
+}
+.chart-box1-list1-box1{
+	width: 39%;
+	height: 100%;
+}
+.chart-box1-list1-box2{
+	width: 59%;
+	height: 100%;
+}
+#xsTable td{
+	height: 26px;
+	line-height: 26px;
+}
